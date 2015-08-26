@@ -1,0 +1,14 @@
+{
+  "name": "dylanratcliffe-classroom_addons",
+  "version": "0.1.0",
+  "author": "dylanratcliffe",
+  "summary": "Addons for puppetlabs classroom",
+  "license": "Apache-2.0",
+  "source": "https://github.com/dylanratcliffe/classroom_addons",
+  "project_page": "https://github.com/dylanratcliffe/classroom_addons",
+  "issues_url": "https://github.com/dylanratcliffe/classroom_addons/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
