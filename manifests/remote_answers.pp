@@ -3,6 +3,7 @@ class classroom_addons::remote_answers (
 ) {
   exec { 'git remote add answers gandalf@master.puppetlabs.vm:/var/repositories/gandalf.git':
     path   => $::path,
+    cwd    => $classroom::params::workdir,
     unless => 'git remove -v | grep gandalf',
   }
 }
