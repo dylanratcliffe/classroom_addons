@@ -1,9 +1,11 @@
 class classroom_addons::remote_answers (
   $master_vm_name,
 ) {
-  exec { 'git remote add answers gandalf@master.puppetlabs.vm:/var/repositories/gandalf.git':
+  include classroom::params
+
+  exec { "git remote add answers ${master_vm_name}@master.puppetlabs.vm:/var/repositories/${master_vm_name}.git":
     path   => $::path,
     cwd    => $classroom::params::workdir,
-    unless => 'git remote -v | grep gandalf',
+    unless => "git remote -v | grep ${master_vm_name}",
   }
 }
